@@ -2,160 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Build Product v1 — Everline</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Product v1 — Everline</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
-    }
-    header {
-      background: #1a1a1a;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      letter-spacing: 1px;
-    }
-    header p {
-      color: #aaaaaa;
-      margin: 10px 0 0 0;
-      font-size: 16px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .content h2 {
-      font-size: 28px;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-    .content p {
-      color: #aaaaaa;
+      font-family: Georgia, serif;
+      background: #0f0f0f;
+      color: #f5f1e8;
       line-height: 1.6;
-      margin-bottom: 30px;
     }
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin: 50px 0;
+    header, section, footer {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 24px;
     }
-    .feature {
-      background: #1a1a1a;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid #333;
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    .feature h3 {
-      margin-top: 0;
-      font-size: 18px;
+    h1 {
+      font-size: clamp(42px, 8vw, 86px);
+      line-height: 1;
+      margin-bottom: 24px;
     }
-    .feature p {
+    h2 {
+      font-size: 34px;
+      margin-bottom: 18px;
+      color: #d7b56d;
+    }
+    p {
+      font-size: 20px;
+      max-width: 760px;
+      color: #ddd5c7;
+    }
+    .tag {
+      color: #d7b56d;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       font-size: 14px;
-      margin: 15px 0 0 0;
+      margin-bottom: 18px;
     }
-    .cta-section {
-      margin: 60px 0;
-    }
-    .cta-button {
-      text-decoration: none;
-      color: black;
-      background: white;
-      padding: 15px 40px;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
+    .button {
       display: inline-block;
-      transition: background 0.3s;
+      margin-top: 28px;
+      padding: 16px 26px;
+      border: 1px solid #d7b56d;
+      color: #0f0f0f;
+      background: #d7b56d;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
     }
-    .cta-button:hover {
-      background: #f0f0f0;
+    .button:hover {
+      background: #e8c97e;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 34px;
+    }
+    .card {
+      border: 1px solid #332c20;
+      padding: 26px;
+      background: #171717;
+      transition: all 0.3s;
+    }
+    .card:hover {
+      border-color: #d7b56d;
+      background: #1f1f1f;
+    }
+    .card h3 {
+      color: #f5f1e8;
+      margin-top: 0;
+      color: #d7b56d;
+    }
+    .back-link {
+      color: #9f9688;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 24px;
+      display: inline-block;
+    }
+    .back-link:hover {
+      color: #d7b56d;
     }
     footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #666;
-      border-top: 1px solid #333;
-      margin-top: 80px;
-    }
-    @media (max-width: 600px) {
-      .features {
-        grid-template-columns: 1fr;
-      }
-      header h1 {
-        font-size: 28px;
-      }
+      border-top: 1px solid #332c20;
+      color: #9f9688;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Build Product v1</h1>
-    <p>Build, scale, and distribute your sovereign publishing system</p>
+
+  <header class="hero">
+    <div class="tag">Build Product v1</div>
+    <h1>Manufacturing intellectual property into compounding digital assets.</h1>
+    <p>
+      Build Product v1 is the foundational framework for creating and scaling your own 
+      sovereign publishing system. It provides the tools and infrastructure needed to turn 
+      signals into products.
+    </p>
+    <a class="button" href="https://everline-newsletter.beehiiv.com/">Subscribe & Get Access</a>
   </header>
 
-  <div class="container">
-    <div class="content">
-      <h2>What is Build Product v1?</h2>
-      <p>
-        Build Product v1 is the foundational framework for creating and scaling
-        your own sovereign publishing system. It provides the tools and infrastructure
-        needed to manufacture intellectual property into compounding digital assets.
-      </p>
+  <section>
+    <h2>The Build Framework</h2>
+    <p>
+      From raw signal to market-ready product. Build Product v1 walks you through the entire 
+      process of manufacturing digital assets that compound in value.
+    </p>
 
-      <div class="features">
-        <div class="feature">
-          <h3>Sovereign Control</h3>
-          <p>
-            Own and control your publishing infrastructure with complete sovereignty
-            over your content and audience.
-          </p>
-        </div>
-        <div class="feature">
-          <h3>Asset Manufacturing</h3>
-          <p>
-            Transform ideas into digital assets that compound in value over time
-            through strategic distribution.
-          </p>
-        </div>
-        <div class="feature">
-          <h3>Scalable Infrastructure</h3>
-          <p>
-            Built on proven systems designed to scale from startup to enterprise
-            without friction.
-          </p>
-        </div>
-        <div class="feature">
-          <h3>Integrated Distribution</h3>
-          <p>
-            Seamlessly distribute your content across multiple channels and platforms
-            from a single system.
-          </p>
-        </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Signal Intelligence</h3>
+        <p>Identify emerging opportunities in AI, media, and digital commerce before they trend.</p>
       </div>
 
-      <h2>Ready to Get Started?</h2>
-      <p>
-        Join our community of sovereign publishers and start building your digital empire today.
-      </p>
+      <div class="card">
+        <h3>Framework Design</h3>
+        <p>Turn observations into repeatable frameworks that others can learn and implement.</p>
+      </div>
 
-      <div class="cta-section">
-        <a href="https://everline-newsletter.beehiiv.com/subscribe" class="cta-button">Subscribe & Get Access</a>
+      <div class="card">
+        <h3>Asset Manufacturing</h3>
+        <p>Create newsletter archives, guides, templates, and digital products from your frameworks.</p>
+      </div>
+
+      <div class="card">
+        <h3>Distribution Systems</h3>
+        <p>Build sustainable channels for attention, trust, and conversion across platforms.</p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section>
+    <h2>What You'll Learn</h2>
+    <p>
+      The Build Product v1 curriculum covers the entire journey from idea to scalable product:
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>System Thinking</h3>
+        <p>Design publishing infrastructure that compounds. Learn the Everline Flywheel.</p>
+      </div>
+
+      <div class="card">
+        <h3>Content Strategy</h3>
+        <p>Create content that becomes assets. Make every piece work harder by design.</p>
+      </div>
+
+      <div class="card">
+        <h3>Product Building</h3>
+        <p>Transform knowledge into digital products. Move beyond newsletters to real leverage.</p>
+      </div>
+
+      <div class="card">
+        <h3>Creator Economics</h3>
+        <p>Understand the economics of sovereign publishing. Build for revenue, not just reach.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Next Steps</h2>
+    <p>
+      Join the Everline Letter to get early access to Build Product v1, exclusive frameworks, 
+      and a community of creators building sovereign media systems.
+    </p>
+    <a class="button" href="https://everline-newsletter.beehiiv.com/">Join the Letter</a>
+    <br>
+    <a class="back-link" href="../site/index.html">← Back to Everline</a>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Everline. All rights reserved.</p>
+    © 2026 Everline Media Systems. Building the operating system for sovereign digital publishing.
   </footer>
+
 </body>
 </html>
