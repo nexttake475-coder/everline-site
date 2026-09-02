@@ -1,56 +1,812 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Generate stronger social media captions faster with Caption Generator by Everline Media Systems.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Caption Generator — Everline Media Systems</title>
+
+<meta
+  name="description"
+  content="Turn one idea into platform-aware hooks, captions, CTAs, and hashtags with Caption Generator by Everline Media Systems."
+>
+
 <style>
-:root{--black:#0c0c0d;--panel:#151516;--gold:#d7b56d;--cream:#f5f1e8;--muted:#b8b1a5;--line:#34302a;--max:1100px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--cream);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
-nav{position:sticky;top:0;z-index:10;background:rgba(12,12,13,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(215,181,109,.2)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-family:Georgia,serif;text-decoration:none;letter-spacing:.04em}
-.btn{display:inline-flex;justify-content:center;align-items:center;padding:15px 23px;border:1px solid var(--gold);border-radius:4px;background:var(--gold);color:#111;text-decoration:none;font-weight:800;transition:.2s}.btn:hover{background:#efd18e;transform:translateY(-1px)}.btn.alt{background:transparent;color:var(--cream);border-color:#625b50}.btn.alt:hover{border-color:var(--gold);color:var(--gold)}
-.hero{padding:110px 0 96px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}.hero:after{content:"";position:absolute;right:-180px;top:-220px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(215,181,109,.18),transparent 68%);pointer-events:none}
-.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.08}h1{font-size:clamp(48px,8vw,88px);max-width:900px;margin:18px 0 26px}h2{font-size:clamp(34px,5vw,54px);margin:12px 0 20px}h3{font-size:24px;margin:0 0 10px}.lead{font-size:clamp(18px,2vw,22px);color:var(--muted);max-width:780px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.micro{font-size:13px;color:#8f887d}
-section{padding:84px 0}.dark{background:#101011;border-block:1px solid var(--line)}.split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}.section-head{max-width:780px;margin-bottom:38px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(145deg,#121213,var(--panel))}.card p{color:var(--muted);margin:0}.num{color:var(--gold);font-weight:900;margin-bottom:16px}
-.checks{list-style:none;padding:0;margin:22px 0}.checks li{position:relative;padding:8px 0 8px 30px;color:var(--muted)}.checks li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
-.steps{counter-reset:steps}.step{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}.step:before{counter-increment:steps;content:counter(steps);width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-weight:800}.step p{margin:0;color:var(--muted)}.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.pill{padding:8px 13px;border:1px solid var(--line);border-radius:100px;background:var(--panel);color:#dad4c9}
-.price-card{max-width:650px;margin:auto;padding:42px;border:1px solid var(--gold);border-radius:10px;background:var(--panel);box-shadow:0 24px 80px rgba(0,0,0,.35)}.price{font:68px/1 Georgia,serif;margin:22px 0 5px}.price-card .btn{width:100%;margin-top:16px}
-.faq{max-width:820px;margin:auto}details{padding:20px 0;border-bottom:1px solid var(--line)}summary{cursor:pointer;font-size:18px;font-weight:800}details p{color:var(--muted)}.closing{text-align:center}.closing .lead{margin-inline:auto}.closing .actions{justify-content:center}
-footer{padding:28px 0;border-top:1px solid var(--line);color:#8f887d;font-size:13px}.footer{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-@media(max-width:800px){.grid,.split{grid-template-columns:1fr}.hero{padding:78px 0 68px}section{padding:64px 0}}@media(max-width:520px){.wrap{width:min(calc(100% - 28px),var(--max))}.brand{font-size:14px}.nav .btn{padding:9px 11px;font-size:13px}.actions .btn{width:100%}.price-card{padding:28px 22px}}
+:root {
+  --bg: #0b0b0a;
+  --surface: #121210;
+  --surface2: #171714;
+  --ink: #f4efe6;
+  --muted: #aaa095;
+  --gold: #d4aa55;
+  --gold2: #efcf88;
+  --line: #302a21;
+  --max: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(212,170,85,.10),
+      transparent 28%
+    ),
+    var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap {
+  width: min(var(--max), calc(100% - 32px));
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font: 400 11px Inter, sans-serif;
+  letter-spacing: .05em;
+}
+
+.navcta {
+  font-size: 13px;
+  color: var(--gold);
+}
+
+.hero {
+  padding: 88px 0 70px;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 54px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: .97;
+  letter-spacing: -.035em;
+  margin: 16px 0 24px;
+}
+
+h2 {
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.05;
+  margin: 10px 0 18px;
+}
+
+.hero p {
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 680px;
+}
+
+.price {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  margin: 28px 0 8px;
+}
+
+.price strong {
+  font: 700 42px Georgia, serif;
+  color: var(--gold2);
+}
+
+.price span {
+  color: var(--muted);
+  padding-bottom: 8px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold);
+  color: #161108;
+  border-radius: 11px;
+  padding: 15px 22px;
+  font-weight: 800;
+  min-height: 52px;
+}
+
+.button:hover {
+  background: var(--gold2);
+}
+
+.subnote {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.demo {
+  background: linear-gradient(180deg, #141412, #0f0f0d);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.demo-window {
+  border: 1px solid #2b271f;
+  border-radius: 14px;
+  background: #0d0d0c;
+  overflow: hidden;
+}
+
+.demo-top {
+  padding: 15px 17px;
+  border-bottom: 1px solid #242119;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.demo-body {
+  padding: 19px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.mini {
+  border: 1px solid #27231c;
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  min-height: 78px;
+}
+
+.mini strong {
+  color: var(--gold2);
+  display: block;
+  margin-bottom: 6px;
+}
+
+section {
+  padding: 76px 0;
+  border-top: 1px solid var(--line);
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 720px;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 23px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.step {
+  padding: 20px;
+  border-left: 1px solid var(--gold);
+  background: linear-gradient(
+    90deg,
+    rgba(212,170,85,.06),
+    transparent
+  );
+}
+
+.step b {
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.step strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  margin: 7px 0;
+}
+
+.step span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.includes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.checklist {
+  display: grid;
+  gap: 12px;
+}
+
+.check {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  color: #ddd5c7;
+}
+
+.check:before {
+  content: "✓";
+  color: var(--gold);
+  margin-right: 10px;
+}
+
+.offer {
+  background: linear-gradient(145deg, #17150f, #10100e);
+  border: 1px solid #4b3e24;
+  border-radius: 20px;
+  padding: 34px;
+}
+
+.offer .button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.offer ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.faq {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 17px 19px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.faq p {
+  color: var(--muted);
+}
+
+.final {
+  text-align: center;
+  padding: 92px 0;
+}
+
+.final p {
+  margin: 0 auto 26px;
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 40px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .hero,
+  .includes {
+    grid-template-columns: 1fr;
+  }
+
+  .grid,
+  .workflow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .demo {
+    order: -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid,
+  .workflow,
+  .demo-body {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 54px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
 </style>
 </head>
+
 <body>
-<nav><div class="wrap nav"><a class="brand" href="../../index.html">EVERLINE MEDIA SYSTEMS</a><a class="btn" href="#buy">Get the tool — $19</a></div></nav>
-<main>
-<header class="hero"><div class="wrap"><div class="eyebrow">Everline Tools Suite · Caption Generator</div><h1>Write better captions. Publish faster.</h1><p class="lead">Turn a simple topic into platform-ready hooks, a polished caption, a clear call to action, and relevant hashtags—without staring at a blank page.</p><div class="actions"><a class="btn" href="#buy">Get Caption Generator — $19</a><a class="btn alt" href="#how">See how it works</a></div><p class="micro">One focused tool. Six platforms. A cleaner content workflow.</p></div></header>
-<section class="dark"><div class="wrap split"><div><div class="eyebrow">The friction</div><h2>Your idea should not take longer to caption than to create.</h2></div><div><p class="lead">Most creators know what they want to say. The slowdown happens while turning the idea into an opening line, readable structure, platform-aware wording, and a useful next step.</p><ul class="checks"><li>Stop rewriting the same opening five times.</li><li>Stop settling for flat, generic AI output.</li><li>Stop losing publishing momentum between idea and post.</li></ul></div></div></section>
-<section><div class="wrap"><div class="section-head"><div class="eyebrow">Focused by design</div><h2>Everything needed to move from idea to usable caption.</h2><p class="lead">Not a broad AI chat box—a structured production tool built around one repeated workflow.</p></div><div class="grid">
-<article class="card"><div class="num">01</div><h3>Three hook options</h3><p>Opening lines designed to earn attention quickly.</p></article>
-<article class="card"><div class="num">02</div><h3>Polished caption</h3><p>A readable draft shaped around your topic, tone, and goal.</p></article>
-<article class="card"><div class="num">03</div><h3>Clear CTA</h3><p>A relevant next step for engagement, leads, signups, or sales.</p></article>
-<article class="card"><div class="num">04</div><h3>Hashtag suggestions</h3><p>Relevant hashtags without interrupting your workflow.</p></article>
-<article class="card"><div class="num">05</div><h3>Platform awareness</h3><p>Output shaped for Instagram, TikTok, LinkedIn, X, Threads, or Facebook.</p></article>
-<article class="card"><div class="num">06</div><h3>Tone control</h3><p>Choose bold, warm, luxury, educational, persuasive, or minimalist.</p></article>
-</div></div></section>
-<section class="dark" id="how"><div class="wrap split"><div><div class="eyebrow">How it works</div><h2>Four inputs. One complete caption package.</h2><p class="lead">The structure removes unnecessary decisions so you can stay focused on publishing.</p><div class="pills"><span class="pill">Instagram</span><span class="pill">TikTok</span><span class="pill">LinkedIn</span><span class="pill">X</span><span class="pill">Threads</span><span class="pill">Facebook</span></div></div><div class="steps">
-<div class="step"><div><h3>Choose a platform</h3><p>Select where the content will be published.</p></div></div>
-<div class="step"><div><h3>Enter your topic</h3><p>Give the tool the central idea you want to communicate.</p></div></div>
-<div class="step"><div><h3>Set tone and goal</h3><p>Define how it should sound and what the post should achieve.</p></div></div>
-<div class="step"><div><h3>Generate and publish</h3><p>Review your hooks, caption, CTA, and hashtags, then copy what you need.</p></div></div>
-</div></div></section>
-<section><div class="wrap"><div class="section-head"><div class="eyebrow">Built for execution</div><h2>For people who turn ideas into distribution.</h2></div><div class="grid"><article class="card"><h3>Creators</h3><p>Keep a consistent publishing rhythm without making every caption a writing project.</p></article><article class="card"><h3>Digital product sellers</h3><p>Create clearer educational, authority, promotional, and launch posts.</p></article><article class="card"><h3>Content operators</h3><p>Give repeated caption work a reliable structure across platforms.</p></article></div></div></section>
-<section class="dark" id="buy"><div class="wrap"><div class="price-card"><div class="eyebrow">Launch edition</div><h2>Caption Generator</h2><p class="lead">A focused mini app for faster, cleaner caption production.</p><div class="price">$19</div><p class="micro">One-time launch price</p><ul class="checks"><li>Caption, hook, CTA, and hashtag generation</li><li>Six social platforms</li><li>Multiple tones and publishing goals</li><li>Responsive desktop and mobile experience</li><li>Copy-ready output blocks</li></ul><a class="btn" href="https://everline-newsletter.beehiiv.com/subscribe">Get launch access — $19</a><p class="micro">You will be taken to Everline's launch-access page.</p></div></div></section>
-<section><div class="wrap faq"><div class="section-head"><div class="eyebrow">Questions</div><h2>Frequently asked.</h2></div>
-<details><summary>Is this a prompt pack?</summary><p>No. It is a focused mini web app designed around a specific caption-production workflow.</p></details>
-<details><summary>Do I need writing experience?</summary><p>No. Choose your inputs, generate, review, and copy.</p></details>
-<details><summary>Does it replace content strategy?</summary><p>No. You bring the idea and objective; the tool removes friction from drafting.</p></details>
-<details><summary>Which platforms are supported?</summary><p>Instagram, TikTok, LinkedIn, X, Threads, and Facebook.</p></details>
-</div></section>
-<section class="closing"><div class="wrap"><div class="eyebrow">Idea → caption → publishing</div><h2>Reduce the friction. Keep the momentum.</h2><p class="lead">Build a faster path from what you know to what your audience sees.</p><div class="actions"><a class="btn" href="#buy">Get Caption Generator — $19</a></div></div></section>
-</main>
-<footer><div class="wrap footer"><span>© 2026 Everline Media Systems.</span><span>Intelligence that adapts to your ambition.</span></div></footer>
+
+<div class="wrap">
+
+<nav>
+  <div class="brand">
+    Everline Media Systems
+    <small>TOOLS SUITE</small>
+  </div>
+
+  <a class="navcta" href="#buy">
+    Get Caption Generator →
+  </a>
+</nav>
+
+<header class="hero">
+
+<div>
+
+  <div class="eyebrow">
+    Everline Tools Suite · V1
+  </div>
+
+  <h1>
+    Write better captions faster.
+  </h1>
+
+  <p>
+    Caption Generator turns one idea into three hooks,
+    a polished caption, a clear CTA, and focused hashtags—
+    without starting from a blank page.
+  </p>
+
+  <div class="price">
+    <strong>$19</strong>
+    <span>one-time purchase</span>
+  </div>
+
+  <a
+    class="button"
+    href="https://media-102993.myshopify.com/cart/64510063575409:1"
+  >
+    Get Caption Generator — $19
+  </a>
+
+  <div class="subnote">
+    Secure checkout powered by Shopify.
+  </div>
+
+</div>
+
+<div class="demo">
+
+  <div class="demo-window">
+
+    <div class="demo-top">
+      <span class="dot"></span>
+      <strong>Caption Generator</strong>
+    </div>
+
+    <div class="demo-body">
+
+      <div class="mini">
+        <strong>Platform</strong>
+        Instagram
+      </div>
+
+      <div class="mini">
+        <strong>Goal</strong>
+        Product sales
+      </div>
+
+      <div class="mini">
+        <strong>Hook Options</strong>
+        3 platform-aware openings
+      </div>
+
+      <div class="mini">
+        <strong>Main Caption</strong>
+        Ready-to-publish copy
+      </div>
+
+      <div class="mini">
+        <strong>CTA</strong>
+        One clear next action
+      </div>
+
+      <div class="mini">
+        <strong>Hashtags</strong>
+        Focused suggestions
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</header>
+
+<section>
+
+<div class="eyebrow">
+  The problem
+</div>
+
+<h2>
+  Your idea is ready. The caption shouldn't take another hour.
+</h2>
+
+<p class="lead">
+  The friction usually happens after the idea:
+  finding the hook, structuring the post, writing the CTA,
+  and deciding what fits the platform.
+  Caption Generator compresses those repeated decisions
+  into one focused workflow.
+</p>
+
+</section>
+
+<section>
+
+<div class="eyebrow">
+  What it does
+</div>
+
+<h2>
+  One focused tool. Four useful outputs.
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Hook generation</h3>
+<p>
+Generate three opening lines designed to give your post
+a stronger starting point.
+</p>
+</div>
+
+<div class="card">
+<h3>Main caption</h3>
+<p>
+Build a structured caption from your topic, platform,
+tone, audience, goal, and offer.
+</p>
+</div>
+
+<div class="card">
+<h3>CTA generation</h3>
+<p>
+Create a clear next action for engagement, authority,
+leads, sales, or newsletter growth.
+</p>
+</div>
+
+<div class="card">
+<h3>Hashtag suggestions</h3>
+<p>
+Turn your niche and keywords into a focused set
+of relevant tags.
+</p>
+</div>
+
+<div class="card">
+<h3>Platform control</h3>
+<p>
+Use it for Instagram, TikTok, LinkedIn, X,
+Threads, and Facebook.
+</p>
+</div>
+
+<div class="card">
+<h3>Tone + length control</h3>
+<p>
+Choose bold, clean, warm, luxury, educational,
+witty, persuasive, or minimalist—and short,
+medium, or long.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="eyebrow">
+  Workflow
+</div>
+
+<h2>
+  From idea to publish-ready draft.
+</h2>
+
+<div class="workflow">
+
+<div class="step">
+<b>01</b>
+<strong>Enter the idea</strong>
+<span>Choose platform, topic, and goal.</span>
+</div>
+
+<div class="step">
+<b>02</b>
+<strong>Add context</strong>
+<span>Audience, tone, keywords, CTA, and offer.</span>
+</div>
+
+<div class="step">
+<b>03</b>
+<strong>Generate</strong>
+<span>Create hooks, caption, CTA, and hashtags.</span>
+</div>
+
+<div class="step">
+<b>04</b>
+<strong>Copy + publish</strong>
+<span>Move the usable output into your content workflow.</span>
+</div>
+
+</div>
+
+</section>
+
+<section id="buy">
+
+<div class="includes">
+
+<div>
+
+<div class="eyebrow">
+  Included
+</div>
+
+<h2>
+  A small tool built to remove repeated friction.
+</h2>
+
+<div class="checklist">
+
+<div class="check">
+Caption Generator V1 browser app
+</div>
+
+<div class="check">
+6 supported social platforms
+</div>
+
+<div class="check">
+8 tone controls
+</div>
+
+<div class="check">
+Short, medium, and long caption modes
+</div>
+
+<div class="check">
+3 hook outputs per generation
+</div>
+
+<div class="check">
+CTA + hashtag generation
+</div>
+
+<div class="check">
+Copy controls for fast publishing
+</div>
+
+<div class="check">
+No account or API key required for V1
+</div>
+
+</div>
+
+</div>
+
+<div class="offer">
+
+<div class="eyebrow">
+  Everline launch price
+</div>
+
+<h2>$19</h2>
+
+<p style="color:var(--muted)">
+  A one-time purchase for Caption Generator V1.
+</p>
+
+<ul>
+<li>
+Built for creators, digital product sellers,
+social media managers, and small businesses.
+</li>
+
+<li>
+Runs locally in the browser.
+</li>
+
+<li>
+Designed as the first product in the
+Everline Tools ecosystem.
+</li>
+</ul>
+
+<a
+  class="button"
+  href="https://media-102993.myshopify.com/cart/64510063575409:1"
+>
+  Buy Caption Generator — $19
+</a>
+
+<div class="subnote">
+  You will be taken to Shopify to complete checkout.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="eyebrow">
+FAQ
+</div>
+
+<h2>
+Before you buy.
+</h2>
+
+<div class="faq">
+
+<details>
+<summary>Is this a prompt pack?</summary>
+<p>
+No. Caption Generator is a focused browser-based
+utility built around a repeatable caption workflow.
+</p>
+</details>
+
+<details>
+<summary>Does it use an external AI API?</summary>
+<p>
+V1 runs its generation logic locally in your browser.
+There are no API keys, accounts, or external AI services
+required to use this version.
+</p>
+</details>
+
+<details>
+<summary>Who is it for?</summary>
+<p>
+Creators, social media managers, digital product sellers,
+personal brands, and small business operators who want
+faster caption execution.
+</p>
+</details>
+
+<details>
+<summary>What platforms are supported?</summary>
+<p>
+Instagram, TikTok, LinkedIn, X, Threads, and Facebook.
+</p>
+</details>
+
+<details>
+<summary>What happens after checkout?</summary>
+<p>
+You will receive access instructions for Caption Generator V1
+after your purchase is confirmed.
+</p>
+</details>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<div class="eyebrow">
+Everline Tools Suite
+</div>
+
+<h2>
+Reduce the distance between idea and publishing.
+</h2>
+
+<p>
+Useful tools should remove repeated friction.
+Caption Generator is built to make one small,
+recurring part of your publishing system faster.
+</p>
+
+<a
+  class="button"
+  href="https://media-102993.myshopify.com/cart/64510063575409:1"
+>
+  Get Caption Generator — $19
+</a>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 Everline Media Systems · Caption Generator V1
+</footer>
+
 </body>
 </html>
