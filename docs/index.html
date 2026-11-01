@@ -1,26 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everline Newsletter</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everline Media Systems</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #0f0f0f;
+      color: #f5f1e8;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 24px;
+    }
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1 {
+      font-size: clamp(42px, 8vw, 86px);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 34px;
+      margin-bottom: 18px;
+      color: #d7b56d;
+    }
+    p {
+      font-size: 20px;
+      max-width: 760px;
+      color: #ddd5c7;
+    }
+    .tag {
+      color: #d7b56d;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 16px 26px;
+      border: 1px solid #d7b56d;
+      color: #0f0f0f;
+      background: #d7b56d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 34px;
+    }
+    .card {
+      border: 1px solid #332c20;
+      padding: 26px;
+      background: #171717;
+    }
+    .card h3 {
+      color: #f5f1e8;
+      margin-top: 0;
+    }
+    footer {
+      border-top: 1px solid #332c20;
+      color: #9f9688;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Subscribe to our Newsletter</h1>
-        <p>Don't miss out on our latest updates.</p>
-        <a href="https://everline-newsletter.beehiiv.com/subscribe" class="cta-button">Subscribe Now</a>
-    </header>
 
-    <section class="newsletter-signup">
-        <h2>Join Our Community!</h2>
-        <input type="email" placeholder="Enter your email address">
-        <button onclick="location.href='https://everline-newsletter.beehiiv.com/subscribe'">Sign Up</button>
-    </section>
+  <header class="hero">
+    <div class="tag">Everline Media Systems</div>
+    <h1>The operating system for sovereign digital publishing.</h1>
+    <p>
+      Everline builds media assets, product systems, and intelligent publishing infrastructure
+      for creators who want more than content — they want a compounding IP machine.
+    </p>
+    <a class="button" href="https://everline-newsletter.beehiiv.com/">Join the Everline Letter</a>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 Everline. All rights reserved.</p>
-    </footer>
+  <section>
+    <h2>What Everline Builds</h2>
+    <p>
+      We turn signals into frameworks, frameworks into assets, assets into products,
+      and products into long-term digital infrastructure.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Signal Intelligence</h3>
+        <p>Tracking emerging shifts in AI, media, commerce, and digital leverage.</p>
+      </div>
+
+      <div class="card">
+        <h3>Content Manufacturing</h3>
+        <p>Turning raw ideas into newsletters, scripts, threads, pages, and product concepts.</p>
+      </div>
+
+      <div class="card">
+        <h3>Product Systems</h3>
+        <p>Building digital offers, templates, guides, and monetizable knowledge assets.</p>
+      </div>
+
+      <div class="card">
+        <h3>Distribution Infrastructure</h3>
+        <p>Creating repeatable routes for attention, trust, email capture, and conversion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The Everline Flywheel</h2>
+    <p>
+      Signal → Framework → Asset → Distribution → Product → Revenue → Archive.
+      Every output becomes part of a larger system. Nothing is wasted.
+    </p>
+  </section>
+
+  <section>
+    <h2>Start Here</h2>
+    <p>
+      Enter the Everline Letter — a private field note for building AI-powered media systems,
+      digital products, and autonomous creator infrastructure.
+    </p>
+    <a class="button" href="https://everline-newsletter.beehiiv.com/">Join the Letter</a>
+  </section>
+
+  <footer>
+    © 2026 Everline Media Systems. Built as a sovereign publishing infrastructure.
+  </footer>
+
 </body>
 </html>
